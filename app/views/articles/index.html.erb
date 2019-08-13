@@ -1,0 +1,19 @@
+
+<div justify-content="center">
+  <h1>My articles</h1>
+</div>
+<div>
+  <ul>
+  <% @articles.each do |article| %>
+
+  <li>
+    <h4> <%= link_to article.title,  article_path(article)%> </h4>
+    <p> <%= article.content %></p>
+
+  </li>
+
+  <% end %>
+
+  </ul>
+
+</div>
